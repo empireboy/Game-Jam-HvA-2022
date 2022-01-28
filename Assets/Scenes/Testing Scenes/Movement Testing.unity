@@ -474,6 +474,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1106172381070815432, guid: e32e8dddb2714274683bc429c1462b12, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4653711140101497358, guid: e32e8dddb2714274683bc429c1462b12, type: 3}
       propertyPath: m_Name
       value: PlayerTwo
@@ -537,7 +541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4853634265138141528, guid: 260315a42f6d8bc40ac6095aabb23940, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4853634265138141528, guid: 260315a42f6d8bc40ac6095aabb23940, type: 3}
       propertyPath: m_LocalPosition.x

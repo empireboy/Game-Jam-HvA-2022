@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButtons : MonoBehaviour
@@ -29,6 +30,15 @@ public class LevelButtons : MonoBehaviour
             var eventSystem = EventSystem.current;
             eventSystem.SetSelectedGameObject(this.gameObject, new BaseEventData(eventSystem));
         }
+    }
+
+    public void PlayLevel()
+    {
+        if (level == 1) SceneManager.LoadScene("SampleScene");
+        if (level == 2) SceneManager.LoadScene("SampleScene");
+        if (level == 3) SceneManager.LoadScene("SampleScene");
+        if (level == 4) SceneManager.LoadScene("SampleScene");
+        if (level == 5) SceneManager.LoadScene("SampleScene");
     }
     
 }

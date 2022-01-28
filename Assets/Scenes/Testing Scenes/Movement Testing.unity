@@ -223,8 +223,7 @@ MonoBehaviour:
   _targets:
   - {fileID: 1983295156}
   - {fileID: 1905284172}
-  - {fileID: 0}
-  _smoothSpeed: 0.125
+  _smoothSpeed: 5
   _screenshakeDistance: 0.2
   _offset: {x: 0, y: 0, z: -10}
 --- !u!1 &780780668

@@ -12,6 +12,6 @@ public class LevelSelecter : MonoBehaviour
 
     public void CheckForUnlockedLevels()
     {
-        //GetComponentInChildren<LevelButtons>().UnlockedCheck();
+        GetComponentInChildren<LevelButtons>().UnlockedCheck();
     }
 }

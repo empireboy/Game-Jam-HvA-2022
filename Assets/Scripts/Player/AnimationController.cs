@@ -11,6 +11,11 @@ public class AnimationController : MonoBehaviour
 
     [SerializeField] private float _velocityThreshold = .8f;
 
+    private bool grounded   = false;
+    private bool moving     = false;
+    private bool jumping    = false;
+    private bool falling    = false;
+
     private void Awake()
     {
         _anim = GetComponent<Animator>();
@@ -20,10 +25,19 @@ public class AnimationController : MonoBehaviour
 
     private void Update()
     {
-        bool grounded = _cc.grounded;
-        bool moving = (_rb.velocity.x > _velocityThreshold || _rb.velocity.x < -_velocityThreshold);
-        bool jumping = (_rb.velocity.y > 0 && !grounded);
-        bool falling = (_rb.velocity.y <= 0 && !grounded);
+        grounded = _cc.grounded;
+        moving = (_rb.velocity.x > _velocityThreshold || _rb.velocity.x < -_velocityThreshold);
+
+        if (_rb.gravityScale > 0)
+        {
+            jumping = (_rb.velocity.y > 0 && !grounded);
+            falling = (_rb.velocity.y <= 0 && !grounded);
+        }
+        else if (_rb.gravityScale < 0)
+        {
+            jumping = (_rb.velocity.y < 0 && !grounded);
+            falling = (_rb.velocity.y >= 0 && !grounded);
+        }
 
         if(moving && !_anim.GetBool("Moving") && _cc.horizontal != 0)
             _anim.SetBool("Moving", true);

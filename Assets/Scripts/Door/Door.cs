@@ -1,27 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    bool goUp;
+    enum Movement { non_specified, Up, Down }
+    [Tooltip("If up or down is selected the door will go that way no matter where it is positioned")]
+    [SerializeField] Movement movement;
+
+    Rigidbody2D rigidbody2D;
+    private int gravityScale = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        movement = Movement.non_specified;
+
+        rigidbody2D = GetComponent<Rigidbody2D>();
+
+        if (transform.position.y < 0)
+            gravityScale = -1;
+
+        if (movement == Movement.Up)
+            gravityScale = -1;
+        else if (movement == Movement.Down)
+            gravityScale = 1;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Activate()
     {
-        
+        rigidbody2D.gravityScale = gravityScale;
     }
 
-    public void Move()
+    public void Deactivate()
     {
-        if(goUp)
-        {
-            
-        }
+        rigidbody2D.gravityScale = -gravityScale;
     }
 }

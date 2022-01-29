@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Button : MonoBehaviour
@@ -7,33 +5,46 @@ public class Button : MonoBehaviour
     private int amountOfBoxes;
     [SerializeField] GameObject actionObject;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        amountOfBoxes++;
-
-        if(collision.gameObject.tag == "LittleBox" && amountOfBoxes >= 2)
+        if(collision.gameObject.tag == "LittleBox")
         {
-            Activate();
+            amountOfBoxes++;
+
+            if (amountOfBoxes >= 2)
+            {
+                Activate();
+            }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "LittleBox")
+        {
+            amountOfBoxes--;
+
+            if(amountOfBoxes < 2)
+            {
+                Deactivate();
+            }
+        }
+            
     }
 
     private void Activate()
     {
         if(actionObject.gameObject.tag == "Door")
         {
-            actionObject.GetComponent<Door>().Move();
+            actionObject.GetComponent<Door>().Activate();
+        }
+    }
+
+    private void Deactivate()
+    {
+        if (actionObject.gameObject.tag == "Door")
+        {
+            actionObject.GetComponent<Door>().Deactivate();
         }
     }
 }

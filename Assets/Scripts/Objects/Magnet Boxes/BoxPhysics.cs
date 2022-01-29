@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoxPhysics : MonoBehaviour
 {
     public bool _isBig;
-    public bool _isPusched;
+    public bool _isPushed;
     public bool _isPulled;
     public bool _onRails;
     [SerializeField] AudioSource boxHit;
@@ -15,7 +15,7 @@ public class BoxPhysics : MonoBehaviour
 
     void Start()
     {
-        _isPusched = false;
+        _isPushed = false;
         _isPulled = false;
         rb = GetComponent<Rigidbody2D>();
         normalGravity = rb.gravityScale;
@@ -39,11 +39,11 @@ public class BoxPhysics : MonoBehaviour
             normalGravity = -1f;
 
         //Box doesn't have gravity when being pushed or pulled
-        if (_isPulled || _isPusched || _onRails)
+
+        if (_isPulled || _isPushed || _onRails)
         {
             rb.gravityScale = 0;
         }
         else rb.gravityScale = normalGravity;
     }
 }
-

@@ -8,18 +8,16 @@ using UnityEngine.UI;
 public class LevelButtons : MonoBehaviour
 {
     [SerializeField] private int level;
-    private LevelSelecter levelSelecter;
     private Image buttonImage;
     private UnityEngine.UI.Button button;
     private void Awake()
     {
-        levelSelecter = GetComponentInParent<LevelSelecter>();
         buttonImage = GetComponent<Image>();
         button = GetComponent<UnityEngine.UI.Button>();
     }
     public void UnlockedCheck()
     {
-        if (PlayerPrefs.GetInt("LevelUnlocked" + level) == 1)//makes the button green (and enables the button) if unlocked
+        if (PlayerPrefs.GetInt("LevelUnlock" + level) == 1)//makes the button green (and enables the button) if unlocked
         {
             buttonImage.color = Color.white;
             button.enabled = true;

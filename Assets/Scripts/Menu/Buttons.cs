@@ -16,9 +16,21 @@ public class Buttons : MonoBehaviour
         Application.Quit();
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+
+
     public void SetSelectedButton()
     {
         var eventSystem = EventSystem.current;
         eventSystem.SetSelectedGameObject(GameObject.Find("Play Button"), new BaseEventData(eventSystem));
     }
+
 }

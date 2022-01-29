@@ -10,12 +10,12 @@ public class LevelButtons : MonoBehaviour
     [SerializeField] private int level;
     private LevelSelecter levelSelecter;
     private Image buttonImage;
-    private Button button;
+    private UnityEngine.UI.Button button;
     private void Awake()
     {
         levelSelecter = GetComponentInParent<LevelSelecter>();
         buttonImage = GetComponent<Image>();
-        button = GetComponent<Button>();
+        button = GetComponent<UnityEngine.UI.Button>();
     }
     public void UnlockedCheck()
     {

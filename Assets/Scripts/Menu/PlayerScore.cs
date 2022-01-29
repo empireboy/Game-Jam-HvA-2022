@@ -6,12 +6,14 @@ using UnityEngine;
 public class PlayerScore : MonoBehaviour
 {
     [SerializeField] GameObject star1, star2, star3;
-    TextMeshProUGUI text;
+    private TextMeshProUGUI text;
+    private int time;
 
-    // Start is called before the first frame update
     void Start()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
+        time = (int)PlayerTimer._timeSpentInLevel;
+        if (time < PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))) PlayerPrefs.SetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"), time);
         text.text = ((int)PlayerTimer._timeSpentInLevel).ToString() + " seconds";
 
         switch (PlayerTimer.starsEarned)

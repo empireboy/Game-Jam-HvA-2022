@@ -37,6 +37,11 @@ public class Buttons : MonoBehaviour
             PlayerPrefs.SetInt("PlayingLevel", PlayerPrefs.GetInt("LastCompletedLevel") + 1);
             SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel") + 1);
         }
+        else
+        {
+            PlayerPrefs.SetInt("PlayingLevel", PlayerPrefs.GetInt("LastCompletedLevel"));
+            SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel"));
+        }
     }
 
 

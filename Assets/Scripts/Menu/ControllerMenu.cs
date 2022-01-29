@@ -10,6 +10,7 @@ public class ControllerMenu : MonoBehaviour
     [SerializeField] private float fadeTime;
     private float fadeTimer;
     [SerializeField] private GameObject nextMenu;
+    private static bool seenWarning;
     void Awake()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
@@ -20,8 +21,8 @@ public class ControllerMenu : MonoBehaviour
     {
         Fade();
         fadeTimer -= Time.deltaTime;
-        if (fadeTimer <= 0) NextMenu();
-        if (Input.anyKey) NextMenu();
+        if (fadeTimer <= 0 || Input.anyKey) seenWarning = true;
+        if (seenWarning) NextMenu();
     }
 
     public void Fade()

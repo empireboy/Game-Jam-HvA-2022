@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LittleBox
   - Door
+  - BigBox
   layers:
   - Default
   - TransparentFX

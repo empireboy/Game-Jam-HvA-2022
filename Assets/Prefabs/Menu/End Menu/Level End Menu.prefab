@@ -224,6 +224,14 @@ PrefabInstance:
       value: Main Menu Button
       objectReference: {fileID: 0}
     - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 4780966949721468817}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 4780966949721468817}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -262,6 +270,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2914043710841088127, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
   m_PrefabInstance: {fileID: 204859147583017845}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7918076449163928531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+  m_PrefabInstance: {fileID: 204859147583017845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3273007277747363639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -364,6 +383,14 @@ PrefabInstance:
       value: Next Level Button
       objectReference: {fileID: 0}
     - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 7918076449163928531}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 7918076449163928531}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -402,6 +429,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2914043710841088127, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
   m_PrefabInstance: {fileID: 3273007277747363639}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4780966949721468817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+  m_PrefabInstance: {fileID: 3273007277747363639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5555249283151435818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5555249283151435818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6950245053731850013, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
@@ -420,7 +458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastLevelText: play again
-  otherLevelText: next level
 --- !u!1001 &7604942743386347445
 PrefabInstance:
   m_ObjectHideFlags: 0

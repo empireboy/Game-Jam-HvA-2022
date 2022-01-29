@@ -271,6 +271,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: platformIndustrial_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 551
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7229c7cfcf3445649aca11153f42996d
+      internalID: 803084729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformIndustrial_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 551
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6548026850d4e49a01d02f3b0a392b
+      internalID: 103975246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformIndustrial_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 481
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661c730d3a5dabc4c8dfbf9c8480cf80
+      internalID: 300587561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformIndustrial_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 481
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3539b01d24280e44fbd01a9e3341fa94
+      internalID: 281604549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformIndustrial_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 15
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e268b9237fc27e74988989421d783065
+      internalID: 66830853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformIndustrial_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 411
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711ec349f4481294fb632829a5b86052
+      internalID: 434500341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -282,13 +408,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      platformIndustrial_sheet_8: -1744800828
       platformIndustrial_sheet_5: 620884610
       platformIndustrial_sheet_7: 1544717097
       platformIndustrial_sheet_4: -176500590
       platformIndustrial_sheet_3: -508728832
+      platformIndustrial_sheet_9: 803084729
+      platformIndustrial_sheet_10: 103975246
+      platformIndustrial_sheet_11: 300587561
       platformIndustrial_sheet_1: 1046288453
       platformIndustrial_sheet_6: -2077750807
+      platformIndustrial_sheet_13: 434500341
       platformIndustrial_sheet_0: -1250937426
+      platformIndustrial_sheet_12: 281604549
       platformIndustrial_sheet_2: 843212651
   spritePackingTag: 
   pSDRemoveMatte: 0

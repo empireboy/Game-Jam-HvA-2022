@@ -7,6 +7,7 @@ public class BoxPhysics : MonoBehaviour
     public bool _isBig;
     public bool _isPushed;
     public bool _isPulled;
+    public bool _onRails;
     [SerializeField] AudioSource boxHit;
 
     private Rigidbody2D rb;
@@ -30,19 +31,19 @@ public class BoxPhysics : MonoBehaviour
     void Update()
     {
         //if the full box is lower then 0, gravity is downwards
-        if (transform.position.y < -transform.lossyScale.y)
+        if (transform.position.y < -(transform.lossyScale.y/2))
             normalGravity = 1f;
 
         //if the full box is higher then 0, gravity is upwards
-        if (transform.position.y > +transform.lossyScale.y)
+        if (transform.position.y > +(transform.lossyScale.y/2))
             normalGravity = -1f;
 
         //Box doesn't have gravity when being pushed or pulled
-        if (_isPulled || _isPushed)
+
+        if (_isPulled || _isPushed || _onRails)
         {
             rb.gravityScale = 0;
         }
         else rb.gravityScale = normalGravity;
     }
 }
-

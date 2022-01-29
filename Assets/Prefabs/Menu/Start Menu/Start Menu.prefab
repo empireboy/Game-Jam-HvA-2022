@@ -466,21 +466,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 6566148680566047947}
-    - target: {fileID: 3131840880734981317, guid: a164d743808aedd42980089f946a6ca7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3131840880734981317, guid: a164d743808aedd42980089f946a6ca7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OnOpen
-      objectReference: {fileID: 0}
     - target: {fileID: 8240639883332298393, guid: a164d743808aedd42980089f946a6ca7, type: 3}
       propertyPath: m_Name
       value: ' Main Menu'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8240639883332298393, guid: a164d743808aedd42980089f946a6ca7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a164d743808aedd42980089f946a6ca7, type: 3}

@@ -27,8 +27,6 @@ public class ControllerManager : MonoBehaviour
 
         if (_amountConnectedControllers != _currentlyConnected)
             SetPlayerControllers();
-
-        Debug.Log("Amount controllers connected: " + _amountConnectedControllers);
     }
 
     private void SetPlayerControllers()

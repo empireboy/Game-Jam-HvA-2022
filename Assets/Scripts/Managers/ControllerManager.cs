@@ -87,5 +87,8 @@ public class ControllerManager : MonoBehaviour
 
                 break;
         }
+
+        playerOne.SpawnIcon();
+        playerTwo.SpawnIcon();
     }
 }

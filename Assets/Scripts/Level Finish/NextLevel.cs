@@ -11,6 +11,7 @@ public class NextLevel : MonoBehaviour
     {
         if (_p1._playerHasFinished && _p2._playerHasFinished)
         {
+            PlayerPrefs.SetInt("LastCompletedLevel", PlayerPrefs.GetInt("PlayingLevel"));
             SceneManager.LoadScene("LevelEndMenuScene");
         }
     }

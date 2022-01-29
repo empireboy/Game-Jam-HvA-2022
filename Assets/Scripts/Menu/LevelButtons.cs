@@ -37,6 +37,7 @@ public class LevelButtons : MonoBehaviour
 
     public void PlayLevel()
     {
+        PlayerPrefs.SetInt("PlayerLevel", level);
         SceneManager.LoadScene("Level " + level);
     }
     

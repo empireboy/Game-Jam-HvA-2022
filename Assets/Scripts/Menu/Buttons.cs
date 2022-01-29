@@ -8,7 +8,8 @@ public class Buttons : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level 1");
+        PlayerPrefs.SetInt("PlayingLevel", PlayerPrefs.GetInt("LastCompletedLevel") + 1);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel") + 1);
     }
 
     public void QuitGame()
@@ -23,7 +24,7 @@ public class Buttons : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel") + 1);
     }
 
 

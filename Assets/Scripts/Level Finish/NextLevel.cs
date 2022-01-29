@@ -12,7 +12,7 @@ public class NextLevel : MonoBehaviour
         if (_p1._playerHasFinished && _p2._playerHasFinished || Input.GetKeyDown(KeyCode.P))
         {
             PlayerPrefs.SetInt("LastCompletedLevel", PlayerPrefs.GetInt("PlayingLevel"));
-            if(PlayerPrefs.GetInt("LastCompletedLevel") != PlayerPrefs.GetInt("AmountOfLevels")) PlayerPrefs.SetInt("levelUnlocked" + (PlayerPrefs.GetInt("PlayingLevel") + 1), 1);
+            if(PlayerPrefs.GetInt("LastCompletedLevel") + 1 != PlayerPrefs.GetInt("AmountOfLevels")) PlayerPrefs.SetInt("LevelUnlocked", PlayerPrefs.GetInt("LevelUnlocked") + 1);
             SceneManager.LoadScene("LevelEndMenuScene");
         }
     }

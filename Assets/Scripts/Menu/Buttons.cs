@@ -22,6 +22,9 @@ public class Buttons : MonoBehaviour
 
     public void QuitGame()
     {
+        PlayerPrefs.SetInt("LastCompletedLevel", 0);
+        PlayerPrefs.SetInt("PlayingLevel", 0);
+        PlayerPrefs.SetInt("LevelUnlocked", 0);
         Application.Quit();
     }
 

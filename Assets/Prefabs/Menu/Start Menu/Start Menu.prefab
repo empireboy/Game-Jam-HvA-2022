@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6537143479948610218}
   - component: {fileID: 6297244251792521719}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: Start Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6832307017467169320, guid: f41bb965269e4a042be286957516ec57, type: 3}
       propertyPath: m_Name
-      value: Controller Menu
+      value: Controller Warning Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8773913718723570242, guid: f41bb965269e4a042be286957516ec57, type: 3}
       propertyPath: mainMenu

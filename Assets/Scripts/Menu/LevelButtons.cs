@@ -10,12 +10,12 @@ public class LevelButtons : MonoBehaviour
     [SerializeField] private int level;
     private LevelSelecter levelSelecter;
     private Image buttonImage;
-    private Button button;
+    private UnityEngine.UI.Button button;
     private void Awake()
     {
         levelSelecter = GetComponentInParent<LevelSelecter>();
         buttonImage = GetComponent<Image>();
-        button = GetComponent<Button>();
+        button = GetComponent<UnityEngine.UI.Button>();
     }
     public void UnlockedCheck()
     {
@@ -31,17 +31,13 @@ public class LevelButtons : MonoBehaviour
         if (level == 1) //sets the first level as selected button
         {
             var eventSystem = EventSystem.current;
-            eventSystem.SetSelectedGameObject(this.gameObject, new BaseEventData(eventSystem));
+            eventSystem.SetSelectedGameObject(gameObject, new BaseEventData(eventSystem));
         }
     }
 
     public void PlayLevel()
     {
-        if (level == 1) SceneManager.LoadScene("SampleScene");
-        if (level == 2) SceneManager.LoadScene("SampleScene");
-        if (level == 3) SceneManager.LoadScene("SampleScene");
-        if (level == 4) SceneManager.LoadScene("SampleScene");
-        if (level == 5) SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level " + level);
     }
     
 }

@@ -10,7 +10,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private float _fallMultiplier = 2.5f;
     [SerializeField] private float _lowJumpMultiplier = 2f;
     [SerializeField] AudioSource jumpSound;
-
+ 
     [Range(0, .3f)] [SerializeField] private float _movementSmoothing = .05f;
 
     [SerializeField] private LayerMask _whatIsGround;

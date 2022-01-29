@@ -8,7 +8,16 @@ public class Buttons : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level 1");
+        if (PlayerPrefs.GetInt("LastCompletedLevel") != PlayerPrefs.GetInt("AmountOfLevels"))
+        {
+            PlayerPrefs.SetInt("PlayingLevel", PlayerPrefs.GetInt("LastCompletedLevel") + 1);
+            SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel") + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("PlayingLevel", PlayerPrefs.GetInt("LastCompletedLevel"));
+            SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel"));
+        }
     }
 
     public void QuitGame()
@@ -23,7 +32,11 @@ public class Buttons : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level 2");
+        if (PlayerPrefs.GetInt("LastCompletedLevel") != PlayerPrefs.GetInt("AmountOfLevels"))
+        {
+            PlayerPrefs.SetInt("PlayingLevel", PlayerPrefs.GetInt("LastCompletedLevel") + 1);
+            SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel") + 1);
+        }
     }
 
 
@@ -33,4 +46,10 @@ public class Buttons : MonoBehaviour
         eventSystem.SetSelectedGameObject(GameObject.Find("Play Button"), new BaseEventData(eventSystem));
     }
 
+    public void ResetStats()
+    {
+        PlayerPrefs.SetInt("LastCompletedLevel", 0);
+        PlayerPrefs.SetInt("PlayingLevel", 0);
+        PlayerPrefs.SetInt("LevelUnlocked", 1);
+    }
 }

@@ -16,6 +16,11 @@ public class Button : MonoBehaviour
                 Activate();
             }
         }
+
+        if(collision.gameObject.tag == "BigBox")
+        {
+            Activate();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -29,7 +34,12 @@ public class Button : MonoBehaviour
                 Deactivate();
             }
         }
-            
+
+        if (collision.gameObject.tag == "BigBox")
+        {
+            Deactivate();
+        }
+
     }
 
     private void Activate()

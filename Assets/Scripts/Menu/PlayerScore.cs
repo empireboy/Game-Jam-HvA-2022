@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
-    [SerializeField] GameObject star1, star2, star3;
-    private TextMeshProUGUI text;
+    [SerializeField] private GameObject star1, star2, star3;
+    [SerializeField] private TextMeshProUGUI timeText, fastestTimeText;
     private int time;
 
     void Start()
     {
-        text = GetComponentInChildren<TextMeshProUGUI>();
         time = (int)PlayerTimer._timeSpentInLevel;
-        if (time < PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))) PlayerPrefs.SetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"), time);
-        text.text = ((int)PlayerTimer._timeSpentInLevel).ToString() + " seconds";
+        if (time < PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel")) || PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel")) == 0) PlayerPrefs.SetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"), time);
+
+        if(time > 3600)//if someone has managed to play for more than an hour
+        {
+
+        }
+        else
+        {
+
+        }
+        timeText.text = "Your time: " + ((int)PlayerTimer._timeSpentInLevel).ToString() + " seconds";
+        fastestTimeText.text = "Your fastest time: " + PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel")).ToString() + " seconds";
 
         switch (PlayerTimer.starsEarned)
         {

@@ -46,6 +46,11 @@ public class ControllerManager : MonoBehaviour
             case 0:
 
                 // Give error that not enough controllers are connected.
+                playerOne._currentCType = ControllerType.Keyboard;
+
+                if (playerOne._currentPlayer != PlayerSlot.none)
+                    playerOne._currentPlayer = PlayerSlot.none;
+
                 if (!_giveWarning)
                     return;
 
@@ -54,6 +59,7 @@ public class ControllerManager : MonoBehaviour
                 _warning.transform.parent = canvas;
 
                 break;
+
             case 1:
 
                 // Player one uses Keyboard and mouse
@@ -75,6 +81,7 @@ public class ControllerManager : MonoBehaviour
                     playerTwo._currentPlayer = PlayerSlot.PlayerTwo;
 
                 break;
+
             case 2:
 
                 // Player one uses controller

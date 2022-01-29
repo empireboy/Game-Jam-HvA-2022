@@ -283,7 +283,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7977853568580049689, guid: 54a1114aeae5f3649bcee35bb8cc3539, type: 3}
       propertyPath: m_Name
-      value: LevelEndMenu
+      value: End Menu
       objectReference: {fileID: 0}
     - target: {fileID: 7977853568580049693, guid: 54a1114aeae5f3649bcee35bb8cc3539, type: 3}
       propertyPath: m_Pivot.x

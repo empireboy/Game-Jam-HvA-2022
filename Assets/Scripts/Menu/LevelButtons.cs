@@ -31,17 +31,13 @@ public class LevelButtons : MonoBehaviour
         if (level == 1) //sets the first level as selected button
         {
             var eventSystem = EventSystem.current;
-            eventSystem.SetSelectedGameObject(this.gameObject, new BaseEventData(eventSystem));
+            eventSystem.SetSelectedGameObject(gameObject, new BaseEventData(eventSystem));
         }
     }
 
     public void PlayLevel()
     {
-        if (level == 1) SceneManager.LoadScene("SampleScene");
-        if (level == 2) SceneManager.LoadScene("SampleScene");
-        if (level == 3) SceneManager.LoadScene("SampleScene");
-        if (level == 4) SceneManager.LoadScene("SampleScene");
-        if (level == 5) SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level " + level);
     }
     
 }

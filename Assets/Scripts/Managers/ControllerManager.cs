@@ -48,19 +48,19 @@ public class ControllerManager : MonoBehaviour
                 // Player one uses Keyboard and mouse
                 playerOne._currentCType = ControllerType.Keyboard;
 
-                if(playerOne._currentPlayer == PlayerSlot.none)
-                    playerOne._currentPlayer = PlayerSlot.PlayerOne;
+                if(playerOne._currentPlayer != PlayerSlot.none)
+                    playerOne._currentPlayer = PlayerSlot.none;
 
                 // Player two uses controller
                 if (playerTwo._currentCType != ControllerType.Controller)
                     playerTwo._currentCType = ControllerType.Controller;
 
-                if (playerOne._currentPlayer != PlayerSlot.none)
+                if (playerTwo._currentPlayer != PlayerSlot.none)
                     return;
 
                 if (playerOne._currentPlayer != PlayerSlot.PlayerOne)
                     playerTwo._currentPlayer = PlayerSlot.PlayerOne;
-                else if(playerOne._currentPlayer == PlayerSlot.PlayerOne)
+                else 
                     playerTwo._currentPlayer = PlayerSlot.PlayerTwo;
 
                 break;
@@ -79,7 +79,7 @@ public class ControllerManager : MonoBehaviour
                 if (playerTwo._currentCType != ControllerType.Controller)
                     playerTwo._currentCType = ControllerType.Controller;
 
-                if (playerOne._currentPlayer != PlayerSlot.none)
+                if (playerTwo._currentPlayer != PlayerSlot.none)
                     return;
 
                 if (playerOne._currentPlayer != PlayerSlot.PlayerOne)

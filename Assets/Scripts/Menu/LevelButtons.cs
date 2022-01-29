@@ -12,13 +12,13 @@ public class LevelButtons : MonoBehaviour
     private UnityEngine.UI.Button button;
     private void Awake()
     {
-        PlayerPrefs.SetInt("LevelUnlock" + 1,1);
+        PlayerPrefs.SetInt("LevelUnlocked" + 1,1);
         buttonImage = GetComponent<Image>();
         button = GetComponent<UnityEngine.UI.Button>();
     }
     public void UnlockedCheck()
     {
-        if (PlayerPrefs.GetInt("LevelUnlock" + level) == 1)//makes the button green (and enables the button) if unlocked
+        if (PlayerPrefs.GetInt("LevelUnlocked" + level) == 1)//makes the button green (and enables the button) if unlocked
         {
             buttonImage.color = Color.white;
             button.enabled = true;

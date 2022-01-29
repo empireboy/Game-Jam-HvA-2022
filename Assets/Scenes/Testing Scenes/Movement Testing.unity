@@ -798,6 +798,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6993471669012214310, guid: 4d8621736c209d348ac45b956783041a, type: 3}
+      propertyPath: _giveWarning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993471669012214310, guid: 4d8621736c209d348ac45b956783041a, type: 3}
+      propertyPath: _NoControllerWarning
+      value: 
+      objectReference: {fileID: 7077093446783832911, guid: 7e9f5bf9ab491f04a826c445c61fda46, type: 3}
     - target: {fileID: 6993471669012214311, guid: 4d8621736c209d348ac45b956783041a, type: 3}
       propertyPath: m_Name
       value: Game Manager

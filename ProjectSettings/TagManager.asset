@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LittleBox
   - Door
-  - BigBox
   - Player2
+  - Box
+  - BigBox
   layers:
   - Default
   - TransparentFX

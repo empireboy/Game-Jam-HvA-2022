@@ -43,8 +43,6 @@ public class Buttons : MonoBehaviour
             SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel"));
         }
     }
-
-
     public void SetSelectedButton()
     {
         var eventSystem = EventSystem.current;

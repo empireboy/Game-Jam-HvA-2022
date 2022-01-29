@@ -1,23 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelEndStars : MonoBehaviour
 {
     [SerializeField] private Sprite deactiveStar;
     [SerializeField] private Sprite activeStar;
-    private SpriteRenderer spriteRenderer;
+    private Image image;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        image = GetComponent<Image>();
     }
     public void Activate()
     {
-        spriteRenderer.sprite = activeStar;
+        image.sprite = activeStar;
     }
     public void Deactivate()
     {
-        spriteRenderer.sprite = deactiveStar;
+        image.sprite = deactiveStar;
     }
 }

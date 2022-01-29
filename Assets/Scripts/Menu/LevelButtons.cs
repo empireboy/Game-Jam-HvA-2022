@@ -24,7 +24,10 @@ public class LevelButtons : MonoBehaviour
             buttonImage.color = Color.white;
             button.enabled = true;
         }
+    }
 
+    public void SetSelectedButton()
+    {
         if (level == 1) //sets the first level as selected button
         {
             var eventSystem = EventSystem.current;

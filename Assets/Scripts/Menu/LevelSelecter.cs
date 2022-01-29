@@ -10,8 +10,10 @@ public class LevelSelecter : MonoBehaviour
         levelsUnlocked[levelUnlocked] = true;
     }
 
-    public void CheckForUnlockedLevels()
+    public void OnOpen()
     {
-        GetComponentInChildren<LevelButtons>().UnlockedCheck();
+        LevelButtons buttons = GetComponentInChildren<LevelButtons>();
+        buttons.UnlockedCheck();
+        buttons.SetSelectedButton();
     }
 }

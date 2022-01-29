@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948542815600021158}
+  - component: {fileID: 7255170713201797967}
   m_Layer: 0
   m_Name: Level End Menu
   m_TagString: Untagged
@@ -23,7 +24,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5133114398500093640}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.052248098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41,6 +42,18 @@ RectTransform:
   m_AnchoredPosition: {x: -551.679, y: -262.41977}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7255170713201797967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133114398500093640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54ebd7f692dda7428d1b6adf0f251ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &93953261028948885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +215,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Menu Button
       objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7255170713201797967}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Buttons, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8757902311863631371, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
       propertyPath: m_Name
       value: Main Menu Text
@@ -313,6 +354,34 @@ PrefabInstance:
     - target: {fileID: 6950245053731850013, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
       propertyPath: m_Name
       value: Next Level Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7255170713201797967}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Buttons, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013424203168592038, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8757902311863631371, guid: 523a7cab22f2c674ca825ecefb33aa36, type: 3}
       propertyPath: m_Name

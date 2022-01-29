@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4707236065963714278}
   - component: {fileID: 8773913718723570242}
   m_Layer: 5
-  m_Name: Controller Menu
+  m_Name: Controller Warning Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

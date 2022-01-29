@@ -12,6 +12,7 @@ public class LevelButtons : MonoBehaviour
     private UnityEngine.UI.Button button;
     private void Awake()
     {
+        PlayerPrefs.SetInt("LevelUnlock" + 1,1);
         buttonImage = GetComponent<Image>();
         button = GetComponent<UnityEngine.UI.Button>();
     }
@@ -35,7 +36,7 @@ public class LevelButtons : MonoBehaviour
 
     public void PlayLevel()
     {
-        PlayerPrefs.SetInt("PlayerLevel", level);
+        PlayerPrefs.SetInt("PlayingLevel", level);
         SceneManager.LoadScene("Level " + level);
     }
     

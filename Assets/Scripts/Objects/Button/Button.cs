@@ -4,6 +4,7 @@ public class Button : MonoBehaviour
 {
     private int amountOfBoxes;
     [SerializeField] GameObject actionObject;
+    [SerializeField] AudioSource pressSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -46,6 +47,7 @@ public class Button : MonoBehaviour
     {
         if(actionObject.gameObject.tag == "Door")
         {
+            pressSound.Play();
             actionObject.GetComponent<Door>().Activate();
         }
     }

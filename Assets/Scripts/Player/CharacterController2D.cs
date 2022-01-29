@@ -26,10 +26,12 @@ public class CharacterController2D : MonoBehaviour
     private bool canMove = true;
     private bool jump = false;
     private bool canJump = true;
-    private bool grounded = false;
 
-    private float horizontal = 0;
+    public float horizontal = 0;
+
     private float vertical = 0;
+    
+    public bool grounded = false;
 
     private void Awake()
     {

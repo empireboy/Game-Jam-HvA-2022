@@ -22,9 +22,6 @@ public class Buttons : MonoBehaviour
 
     public void QuitGame()
     {
-        PlayerPrefs.SetInt("LastCompletedLevel", 0);
-        PlayerPrefs.SetInt("PlayingLevel", 0);
-        PlayerPrefs.SetInt("LevelUnlocked", 0);
         Application.Quit();
     }
 
@@ -49,4 +46,10 @@ public class Buttons : MonoBehaviour
         eventSystem.SetSelectedGameObject(GameObject.Find("Play Button"), new BaseEventData(eventSystem));
     }
 
+    public void ResetStats()
+    {
+        PlayerPrefs.SetInt("LastCompletedLevel", 0);
+        PlayerPrefs.SetInt("PlayingLevel", 0);
+        PlayerPrefs.SetInt("LevelUnlocked", 1);
+    }
 }

@@ -10,10 +10,12 @@ public class LevelButtons : MonoBehaviour
     [SerializeField] private int level;
     private Image buttonImage;
     private UnityEngine.UI.Button button;
+    private Color color;
     private void Awake()
     {
         PlayerPrefs.SetInt("LevelUnlocked" + 1,1);
         buttonImage = GetComponent<Image>();
+        color = buttonImage.color;
         button = GetComponent<UnityEngine.UI.Button>();
     }
 
@@ -27,6 +29,11 @@ public class LevelButtons : MonoBehaviour
         {
             buttonImage.color = Color.white;
             button.enabled = true;
+        }
+        else
+        {
+            buttonImage.color = color;
+            button.enabled = false;
         }
     }
 

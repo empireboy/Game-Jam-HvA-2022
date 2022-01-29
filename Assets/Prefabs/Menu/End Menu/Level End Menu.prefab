@@ -420,6 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastLevelText: play again
+  otherLevelText: next level
 --- !u!1001 &7604942743386347445
 PrefabInstance:
   m_ObjectHideFlags: 0

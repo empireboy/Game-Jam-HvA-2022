@@ -1,28 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Pause : MonoBehaviour
 {
     public static bool paused;
-    private GameObject pauseMenu;
+    [SerializeField] private GameObject pauseMenu;
 
-    private void Awake()
-    {
-        pauseMenu = GameObject.Find("Pause Game Menu");
-    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (paused) Resume();
-            else PauseGame();
+            else
+            {
+                PauseGame();
+            }
         }
     }
 
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
+        SetSelectedButton("Resume Button");
         Time.timeScale = 0;
         paused = true;
     }
@@ -32,5 +33,10 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         paused = false;
+    }
+    public void SetSelectedButton(string button)
+    {
+        var eventSystem = EventSystem.current;
+        eventSystem.SetSelectedGameObject(GameObject.Find(button), new BaseEventData(eventSystem));
     }
 }

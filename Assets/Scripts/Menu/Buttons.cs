@@ -43,10 +43,15 @@ public class Buttons : MonoBehaviour
             SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel"));
         }
     }
-    public void SetSelectedButton()
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+    }
+    public void SetSelectedButton(string button)
     {
         var eventSystem = EventSystem.current;
-        eventSystem.SetSelectedGameObject(GameObject.Find("Play Button"), new BaseEventData(eventSystem));
+        eventSystem.SetSelectedGameObject(GameObject.Find(button), new BaseEventData(eventSystem));
     }
 
     public void ResetStats()

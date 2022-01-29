@@ -19,7 +19,7 @@ public class LevelButtons : MonoBehaviour
     }
     public void UnlockedCheck()
     {
-        if (levelSelecter.levelsUnlocked[level])//makes the button green (and enables the button) if unlocked
+        if (PlayerPrefs.GetInt("LevelUnlocked" + level) == 1)//makes the button green (and enables the button) if unlocked
         {
             buttonImage.color = Color.white;
             button.enabled = true;

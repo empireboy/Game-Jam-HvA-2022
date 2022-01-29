@@ -8,15 +8,26 @@ public class InputController : MonoBehaviour
 
     private CharacterController2D cc;
 
+    [SerializeField] private GameObject _icon = null;
+
+    private GameObject _lastIcon = null;
+
     private void Awake()
     {
         cc = GetComponent<CharacterController2D>();
     }
 
-    public void SetSettings(ControllerType type, PlayerSlot slot)
+    public void SpawnIcon()
     {
-        _currentCType = type;
-        _currentPlayer = slot;
+        if(_lastIcon)
+            Destroy(_lastIcon);
+
+        PlayerIcons icons = Instantiate(_icon, transform.position, Quaternion.identity).GetComponent<PlayerIcons>();
+        icons.gameObject.transform.parent = GameObject.Find("Canvas").transform;
+        icons.ChangeIcon(_currentPlayer, _currentCType, this.transform, GetComponent<Rigidbody2D>().gravityScale);
+
+        _lastIcon = icons.gameObject;
+        Destroy(_lastIcon, 6f);
     }
 
     private void Update()

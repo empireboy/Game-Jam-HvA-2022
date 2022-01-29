@@ -5,19 +5,25 @@ using UnityEngine;
 public class BoxPhysics : MonoBehaviour
 {
     public bool _isBig;
-    public bool _isPusched;
+    public bool _isPushed;
     public bool _isPulled;
+    [SerializeField] AudioSource boxHit;
 
     private Rigidbody2D rb;
     private float normalGravity;
 
     void Start()
     {
-        _isPusched = false;
+        _isPushed = false;
         _isPulled = false;
         rb = GetComponent<Rigidbody2D>();
         normalGravity = rb.gravityScale;
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        boxHit.Play();
     }
 
     // Update is called once per frame
@@ -32,7 +38,7 @@ public class BoxPhysics : MonoBehaviour
             normalGravity = -1f;
 
         //Box doesn't have gravity when being pushed or pulled
-        if (_isPulled || _isPusched)
+        if (_isPulled || _isPushed)
         {
             rb.gravityScale = 0;
         }

@@ -123,16 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &134939197 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6871200080321696462, guid: 293e111523b273844b58302b87ba6375, type: 3}
-  m_PrefabInstance: {fileID: 6871200079236235433}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &144268985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6871200080321696462, guid: 293e111523b273844b58302b87ba6375, type: 3}
-  m_PrefabInstance: {fileID: 271704341}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &271704341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,46 +197,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6871200080321696450, guid: 293e111523b273844b58302b87ba6375, type: 3}
   m_PrefabInstance: {fileID: 271704341}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &271704346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144268985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d38c77d0b5c3c344ba6045836821c0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isBig: 1
-  _isPusched: 0
-  _isPulled: 0
---- !u!1 &326668662 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6871200080321696462, guid: 293e111523b273844b58302b87ba6375, type: 3}
-  m_PrefabInstance: {fileID: 567258057}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &326668663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6871200080321696450, guid: 293e111523b273844b58302b87ba6375, type: 3}
   m_PrefabInstance: {fileID: 567258057}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &326668664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326668662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d38c77d0b5c3c344ba6045836821c0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isBig: 0
-  _isPusched: 0
-  _isPulled: 0
 --- !u!1 &534606075
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,21 +642,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6871200080321696450, guid: 293e111523b273844b58302b87ba6375, type: 3}
   m_PrefabInstance: {fileID: 6871200079236235433}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2142687855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134939197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d38c77d0b5c3c344ba6045836821c0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isBig: 0
-  _isPusched: 0
-  _isPulled: 0
 --- !u!1001 &6871200079236235433
 PrefabInstance:
   m_ObjectHideFlags: 0

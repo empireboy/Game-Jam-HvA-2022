@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106172380791437254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.499, z: 0}
+  m_LocalPosition: {x: 0.074, y: 0.499, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -177,7 +177,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1106172381070815431}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9a2e4559570c42d489e1b69ccc672c61, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -196,8 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebafa44b356d682489bf00063dfddb2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentCType: 1
-  _currentPlayer: 1
+  _currentCType: 2
+  _currentPlayer: 2
+  _icon: {fileID: 3438402532668760630, guid: fa9153b210f185543abb4b5f4f573094, type: 3}
 --- !u!95 &5477075667732219709
 Animator:
   serializedVersion: 4

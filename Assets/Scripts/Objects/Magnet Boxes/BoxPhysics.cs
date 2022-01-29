@@ -7,6 +7,7 @@ public class BoxPhysics : MonoBehaviour
     public bool _isBig;
     public bool _isPusched;
     public bool _isPulled;
+    [SerializeField] AudioSource boxHit;
 
     private Rigidbody2D rb;
     private float normalGravity;
@@ -18,6 +19,11 @@ public class BoxPhysics : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         normalGravity = rb.gravityScale;
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        boxHit.Play();
     }
 
     // Update is called once per frame

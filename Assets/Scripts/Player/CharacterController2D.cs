@@ -9,6 +9,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private float _moveSpeed = 40f;
     [SerializeField] private float _fallMultiplier = 2.5f;
     [SerializeField] private float _lowJumpMultiplier = 2f;
+    [SerializeField] AudioSource jumpSound;
 
     [Range(0, .3f)] [SerializeField] private float _movementSmoothing = .05f;
 
@@ -107,6 +108,7 @@ public class CharacterController2D : MonoBehaviour
         if (grounded && jump)
         {
             grounded = false;
+            jumpSound.Play();
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             _rb.AddForce(new Vector2(0f, _jumpForce * _rb.gravityScale));
         }

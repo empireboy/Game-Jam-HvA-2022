@@ -55,7 +55,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58ec597d252bd0458702b1572fc7ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelsUnlocked: 000100
 --- !u!1001 &1047477985201140513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -473,7 +472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -100
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -618,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -904,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -200
+      value: -500
       objectReference: {fileID: 0}
     - target: {fileID: 8013728402015728273, guid: 8646cfcce292b1046a9bc6848bbaab3b, type: 3}
       propertyPath: m_AnchoredPosition.y

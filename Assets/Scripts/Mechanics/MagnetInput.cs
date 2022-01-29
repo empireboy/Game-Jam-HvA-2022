@@ -29,13 +29,14 @@ public class MagnetInput : MonoBehaviour
                 {
                     case PlayerSlot.PlayerOne:
 
-                        angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Horizontal"), Input.GetAxis("ControllerOne_Vertical")) * Mathf.Rad2Deg;
+                        angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Vertical_Right"), Input.GetAxis("ControllerOne_Horizontal_Right")) * Mathf.Rad2Deg;
+                        Debug.Log(angle);
 
                         break;
 
                     case PlayerSlot.PlayerTwo:
 
-                        angle = Mathf.Atan2(Input.GetAxis("ControllerTwo_Horizontal"), Input.GetAxis("ControllerTwo_Vertical")) * Mathf.Rad2Deg;
+                        angle = Mathf.Atan2(Input.GetAxis("ControllerTwo_Vertical_Right"), Input.GetAxis("ControllerTwo_Horizontal_Right")) * Mathf.Rad2Deg;
 
                         break;
                 }

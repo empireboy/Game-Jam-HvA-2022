@@ -75,7 +75,7 @@ public class MagnetMechanic : MonoBehaviour
 
         _hitRigidbody = _hitObject.GetComponent<Rigidbody2D>();
 
-        _hitObject.GetComponent<BoxPhysics>()._isPusched = true;
+        _hitObject.GetComponent<BoxPhysics>()._isPushed = true;
     }
 
     public void Pull()
@@ -138,7 +138,7 @@ public class MagnetMechanic : MonoBehaviour
             if (_hitObject)
             {
                 _hitObject.GetComponent<BoxPhysics>()._isPulled = false;
-                _hitObject.GetComponent<BoxPhysics>()._isPusched = false;
+                _hitObject.GetComponent<BoxPhysics>()._isPushed = false;
             }
 
             _pushParticleSystemLeft.Stop();

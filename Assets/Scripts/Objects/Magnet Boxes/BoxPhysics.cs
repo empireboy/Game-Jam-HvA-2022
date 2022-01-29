@@ -37,6 +37,21 @@ public class BoxPhysics : MonoBehaviour
             rb.gravityScale = 0;
         }
         else rb.gravityScale = normalGravity;
+
+        if (normalGravity == 1)
+        {
+            transform.position = new Vector3(transform.position.x, Mathf.Min(transform.position.y, 0), transform.position.z);
+
+            if (transform.position.y >= 0)
+                rb.velocity *= new Vector3(1, 0, 1);
+        }
+        else if (normalGravity == -1)
+        {
+            transform.position = new Vector3(transform.position.x, Mathf.Max(transform.position.y, 0), transform.position.z);
+
+            if (transform.position.y <= 0)
+                rb.velocity *= new Vector3(1, 0, 1);
+        }
     }
 }
 

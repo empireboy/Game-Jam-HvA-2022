@@ -12,9 +12,25 @@ public class MagnetMechanic : MonoBehaviour
     public float closeDistanceThreshold;
     public float mouseDistanceThreshold;
 
+    public Sprite magnetPushSprite;
+    public Sprite magnetPullSprite;
+
+    [SerializeField]
+    private ParticleSystem _pushParticleSystemLeft;
+
+    [SerializeField]
+    private ParticleSystem _pushParticleSystemRight;
+
+    [SerializeField]
+    private ParticleSystem _pullParticleSystemLeft;
+
+    [SerializeField]
+    private ParticleSystem _pullParticleSystemRight;
+
     private States _state;
     private GameObject _hitObject;
     private Rigidbody2D _hitRigidbody;
+    private SpriteRenderer _spriteRenderer;
     private Vector3 _currentVectorToMagnet;
     private Vector3 _currentVectorToMouse;
 
@@ -27,6 +43,20 @@ public class MagnetMechanic : MonoBehaviour
 
     public void Push()
     {
+        if (_state == States.None)
+        {
+            _spriteRenderer.sprite = magnetPullSprite;
+
+            _pushParticleSystemLeft.Play();
+            _pushParticleSystemRight.Play();
+            _pullParticleSystemLeft.Stop();
+            _pullParticleSystemRight.Stop();
+
+            _state = States.Push;
+        }
+
+        _spriteRenderer.sprite = magnetPushSprite;
+
         if (_hitObject)
             return;
 
@@ -36,13 +66,32 @@ public class MagnetMechanic : MonoBehaviour
             return;
 
         _hitObject = hit.transform.gameObject;
+
+        if (!_hitObject.CompareTag("BigBox"))
+        {
+            _hitObject = null;
+            return;
+        }
+
         _hitRigidbody = _hitObject.GetComponent<Rigidbody2D>();
 
-        _state = States.Push;
+        _hitObject.GetComponent<BoxPhysics>()._isPusched = true;
     }
 
     public void Pull()
     {
+        if (_state == States.None)
+        {
+            _spriteRenderer.sprite = magnetPullSprite;
+
+            _pullParticleSystemLeft.Play();
+            _pullParticleSystemRight.Play();
+            _pushParticleSystemLeft.Stop();
+            _pushParticleSystemRight.Stop();
+
+            _state = States.Pull;
+        }
+
         if (_hitObject)
             return;
 
@@ -52,14 +101,26 @@ public class MagnetMechanic : MonoBehaviour
             return;
 
         _hitObject = hit.transform.gameObject;
+
+        if (!_hitObject.CompareTag("BigBox"))
+        {
+            _hitObject = null;
+            return;
+        }
+
         _hitRigidbody = _hitObject.GetComponent<Rigidbody2D>();
 
-        _state = States.Pull;
+        _hitObject.GetComponent<BoxPhysics>()._isPulled = true;
     }
 
     public void ReleaseMagnetism()
     {
         _state = States.None;
+    }
+
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -74,6 +135,17 @@ public class MagnetMechanic : MonoBehaviour
         }
         else
         {
+            if (_hitObject)
+            {
+                _hitObject.GetComponent<BoxPhysics>()._isPulled = false;
+                _hitObject.GetComponent<BoxPhysics>()._isPusched = false;
+            }
+
+            _pushParticleSystemLeft.Stop();
+            _pushParticleSystemRight.Stop();
+            _pullParticleSystemLeft.Stop();
+            _pullParticleSystemRight.Stop();
+
             _hitObject = null;
             _hitRigidbody = null;
             _state = States.None;

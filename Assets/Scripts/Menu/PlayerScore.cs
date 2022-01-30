@@ -45,6 +45,9 @@ public class PlayerScore : MonoBehaviour
         //timeText.text = "Your time: " + ((int)PlayerTimer._timeSpentInLevel).ToString() + " seconds";
         //fastestTimeText.text = "Your fastest time: " + PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel")).ToString() + " seconds";
 
+
+        if (PlayerTimer.starsEarned > PlayerPrefs.GetInt("HighestStarsLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))) PlayerPrefs.SetInt("HighestStarsLevel" + PlayerPrefs.GetInt("LastCompletedLevel"), PlayerTimer.starsEarned);
+
         switch (PlayerTimer.starsEarned)
         {
             case 1:

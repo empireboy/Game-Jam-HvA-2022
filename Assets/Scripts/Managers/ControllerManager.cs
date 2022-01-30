@@ -82,6 +82,11 @@ public class ControllerManager : MonoBehaviour
                 else 
                     playerTwo._currentPlayer = PlayerSlot.PlayerTwo;
 
+                if (_controllers[0].ToLower().Contains("xbox"))
+                    playerTwo._controller = Controller.xbox;
+                else
+                    playerTwo._controller = Controller.playstation;
+
                 break;
 
             case 2:
@@ -91,9 +96,25 @@ public class ControllerManager : MonoBehaviour
                     playerOne._currentCType = ControllerType.Controller;
 
                 if (playerTwo._currentPlayer != PlayerSlot.PlayerOne)
+                {
                     playerOne._currentPlayer = PlayerSlot.PlayerOne;
+
+                    if (_controllers[0].ToLower().Contains("xbox"))
+                        playerOne._controller = Controller.xbox;
+                    else
+                        playerOne._controller = Controller.playstation;
+                }
                 else
+                {
                     playerOne._currentPlayer = PlayerSlot.PlayerTwo;
+
+                    if (_controllers[1].ToLower().Contains("xbox"))
+                        playerOne._controller = Controller.xbox;
+                    else
+                        playerOne._controller = Controller.playstation;
+                }
+
+                
 
                 // Player two uses controller
                 if (playerTwo._currentCType != ControllerType.Controller)
@@ -103,9 +124,23 @@ public class ControllerManager : MonoBehaviour
                     break;
 
                 if (playerOne._currentPlayer != PlayerSlot.PlayerOne)
+                {
                     playerTwo._currentPlayer = PlayerSlot.PlayerOne;
+
+                    if (_controllers[0].ToLower().Contains("xbox"))
+                        playerTwo._controller = Controller.xbox;
+                    else
+                        playerTwo._controller = Controller.playstation;
+                }
                 else
+                {
                     playerTwo._currentPlayer = PlayerSlot.PlayerTwo;
+
+                    if (_controllers[1].ToLower().Contains("xbox"))
+                        playerTwo._controller = Controller.xbox;
+                    else
+                        playerTwo._controller = Controller.playstation;
+                }
 
                 break;
         }
@@ -118,3 +153,5 @@ public class ControllerManager : MonoBehaviour
         playerTwo.SpawnIcon();
     }
 }
+
+public enum Controller { xbox, playstation } 

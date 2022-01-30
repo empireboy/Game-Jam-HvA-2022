@@ -14716,7 +14716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magneticForcePush: 8
   magneticForcePull: 15
-  mouseForcePush: 10
+  mouseForcePush: 7
   mouseForcePull: 2
   maxDistance: 10
   distanceFromMagnet: 7

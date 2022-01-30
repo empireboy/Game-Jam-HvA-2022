@@ -27,7 +27,7 @@ public class MagnetMechanic : MonoBehaviour
     [SerializeField]
     private ParticleSystem _pullParticleSystemRight;
 
-    private States _state;
+    [HideInInspector] public  States _state;
     private GameObject _hitObject;
     private Rigidbody2D _hitRigidbody;
     private SpriteRenderer _spriteRenderer;

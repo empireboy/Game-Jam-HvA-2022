@@ -69,4 +69,9 @@ public class Buttons : MonoBehaviour
             PlayerPrefs.SetInt("HighestStarsLevel" + i, 0);
         }
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
 }

@@ -8,6 +8,9 @@ public class PlayerScore : MonoBehaviour
 {
     [SerializeField] private GameObject star1, star2, star3;
     [SerializeField] private TextMeshProUGUI timeText, fastestTimeText;
+    [SerializeField] private GameObject mainMenuButton;
+    [SerializeField] private GameObject nextLevelButton;
+    [SerializeField] private GameObject creditsButton;
     private int time;
 
     void Start()
@@ -88,6 +91,19 @@ public class PlayerScore : MonoBehaviour
                 star2.GetComponent<LevelEndStars>().Activate();
                 star3.GetComponent<LevelEndStars>().Activate();
                 break;
+        }
+
+        if (PlayerPrefs.GetInt("LastCompletedLevel") != PlayerPrefs.GetInt("AmountOfLevels")) 
+        { 
+            mainMenuButton.SetActive(false);
+            nextLevelButton.SetActive(false);
+            creditsButton.SetActive(true);
+        }
+        else
+        {
+            mainMenuButton.SetActive(true);
+            nextLevelButton.SetActive(true);
+            creditsButton.SetActive(false);
         }
     }
 }

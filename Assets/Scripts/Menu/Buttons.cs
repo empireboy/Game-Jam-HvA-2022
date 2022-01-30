@@ -42,7 +42,7 @@ public class Buttons : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("PlayingLevel", PlayerPrefs.GetInt("LastCompletedLevel"));
-            SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel"));
+            SceneManager.LoadScene("EndScreen");
         }
     }
 
@@ -61,7 +61,7 @@ public class Buttons : MonoBehaviour
     public void ResetStats()
     {
         PlayerPrefs.SetInt("LastCompletedLevel", 0);
-        PlayerPrefs.SetInt("PlayingLevel", 0);
+        PlayerPrefs.SetInt("PlayingLevel", 1);
         PlayerPrefs.SetInt("LevelUnlocked", 1);
         for (int i = 1; i <= PlayerPrefs.GetInt("AmountOfLevels"); i++)
         {

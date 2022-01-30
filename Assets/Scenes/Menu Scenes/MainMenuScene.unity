@@ -1176,6 +1176,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 282261575105355017, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282261575105355017, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 353374029281873110, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2227.0054
+      objectReference: {fileID: 0}
+    - target: {fileID: 353374029281873110, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 353374029281873110, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 360964065377000683, guid: 213ce098413a0e84787ca10c56847137, type: 3}
       propertyPath: m_Name
       value: Menu
@@ -1263,6 +1283,14 @@ PrefabInstance:
     - target: {fileID: 3216086907016060647, guid: 213ce098413a0e84787ca10c56847137, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285888771737047469, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: fadeTime
+      value: 10.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285888771737047469, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: fadeSpeed
+      value: 0.165
       objectReference: {fileID: 0}
     - target: {fileID: 6526069443512962871, guid: 213ce098413a0e84787ca10c56847137, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1375,6 +1403,14 @@ PrefabInstance:
     - target: {fileID: 6775676744817814490, guid: 213ce098413a0e84787ca10c56847137, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8683325146799312057, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8485851
+      objectReference: {fileID: 0}
+    - target: {fileID: 8683325146799312057, guid: 213ce098413a0e84787ca10c56847137, type: 3}
+      propertyPath: m_Color.r
+      value: 0.85882354
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 213ce098413a0e84787ca10c56847137, type: 3}

@@ -126,7 +126,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 7
   m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -151,6 +151,7 @@ MonoBehaviour:
   _isPushed: 0
   _isPulled: 0
   _onRails: 0
+  _canGoThroughOrbit: 0
   boxHit: {fileID: 9045467804189712586}
 --- !u!82 &9045467804189712586
 AudioSource:

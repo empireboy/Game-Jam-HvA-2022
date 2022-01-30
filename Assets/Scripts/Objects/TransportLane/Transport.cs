@@ -51,8 +51,9 @@ public class Transport : MonoBehaviour
     {
         box.transform.position = new Vector3(box.transform.position.x + movementSpeed, box.transform.position.y, box.transform.position.z);
 
-        if(box.transform.position.x > transform.position.x + (transform.lossyScale.x / 2) || box.transform.position.x < transform.position.x - (transform.lossyScale.x / 2))
+        if(box.transform.position.x > transform.position.x + (GetComponent<Collider2D>().bounds.size.x / 2) || box.transform.position.x < transform.position.x - (GetComponent<Collider2D>().bounds.size.x / 2))
         {
+            Debug.Log("daiugwdia");
             movementSpeed *= -1;
         }
     }

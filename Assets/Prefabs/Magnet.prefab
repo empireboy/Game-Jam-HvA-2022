@@ -14714,11 +14714,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a107705b727e9c4a988cb0128eeeb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magneticForcePush: 8
-  magneticForcePull: 15
-  mouseForcePush: 7
-  mouseForcePull: 2
-  maxDistance: 10
+  magneticForcePush: 150
+  magneticForcePull: 100
+  mouseForcePush: 60
+  mouseForcePull: 30
+  maxDistance: 3
   distanceFromMagnet: 7
   closeDistanceFactor: 0.95
   closeDistanceThreshold: 1

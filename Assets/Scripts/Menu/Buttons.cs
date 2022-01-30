@@ -27,6 +27,7 @@ public class Buttons : MonoBehaviour
 
     public void MainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenuScene");
     }
 
@@ -43,6 +44,7 @@ public class Buttons : MonoBehaviour
             SceneManager.LoadScene(PlayerPrefs.GetInt("LastCompletedLevel"));
         }
     }
+
 
     public void Restart()
     {

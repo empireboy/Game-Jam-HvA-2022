@@ -122,6 +122,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4544191003091278709}
     m_Modifications:
+    - target: {fileID: 176464473352878646, guid: 015ced11eb70ca5499dc8a58d91aaffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4999587363813323316}
+    - target: {fileID: 176464473352878646, guid: 015ced11eb70ca5499dc8a58d91aaffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 176464473352878646, guid: 015ced11eb70ca5499dc8a58d91aaffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 176464473352878646, guid: 015ced11eb70ca5499dc8a58d91aaffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1775060868998741499, guid: 015ced11eb70ca5499dc8a58d91aaffb, type: 3}
       propertyPath: m_RootOrder
       value: 0

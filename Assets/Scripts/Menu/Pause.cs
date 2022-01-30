@@ -30,10 +30,11 @@ public class Pause : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        pauseMenu.SetActive(false);
         paused = false;
     }
+
     public void SetSelectedButton(string button)
     {
         var eventSystem = EventSystem.current;

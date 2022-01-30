@@ -30,7 +30,21 @@ public class MagnetInput : MonoBehaviour
                     case PlayerSlot.PlayerOne:
 
                         angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Vertical_Right"), Input.GetAxis("ControllerOne_Horizontal_Right")) * Mathf.Rad2Deg;
-                        Debug.Log(angle);
+
+                        if (Input.GetKey(KeyCode.JoystickButton3))
+                        {
+                            _magnetMechanic.Push();
+                        }
+                        else if (Input.GetKey(KeyCode.JoystickButton4))
+                        {
+                            _magnetMechanic.Pull();
+                        }
+                        else
+                        {
+                            _magnetMechanic.ReleaseMagnetism();
+                        }
+
+                        _magnetMechanic.UpdateInput(Camera.main.WorldToScreenPoint(transform.position + new Vector3(Input.GetAxis("ControllerOne_Horizontal_Right"), 0, Input.GetAxis("ControllerOne_Vertical_Right")) * 10));
 
                         break;
 
@@ -47,6 +61,21 @@ public class MagnetInput : MonoBehaviour
 
                 Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(_target.transform.position);
                 angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+                if (Input.GetMouseButton(0))
+                {
+                    _magnetMechanic.Push();
+                }
+                else if (Input.GetMouseButton(1))
+                {
+                    _magnetMechanic.Pull();
+                }
+                else
+                {
+                    _magnetMechanic.ReleaseMagnetism();
+                }
+
+                _magnetMechanic.UpdateInput(Input.mousePosition);
 
                 break;
 

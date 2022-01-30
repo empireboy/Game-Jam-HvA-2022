@@ -33,6 +33,7 @@ public class MagnetMechanic : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Vector3 _currentVectorToMagnet;
     private Vector3 _currentVectorToMouse;
+    private Vector3 _input;
 
     public enum States
     {
@@ -43,7 +44,7 @@ public class MagnetMechanic : MonoBehaviour
 
     public void Push()
     {
-        if (_state == States.None)
+        if (_state != States.Push)
         {
             _spriteRenderer.sprite = magnetPullSprite;
 
@@ -80,7 +81,7 @@ public class MagnetMechanic : MonoBehaviour
 
     public void Pull()
     {
-        if (_state == States.None)
+        if (_state != States.Pull)
         {
             _spriteRenderer.sprite = magnetPullSprite;
 
@@ -115,41 +116,30 @@ public class MagnetMechanic : MonoBehaviour
 
     public void ReleaseMagnetism()
     {
+        if (_hitObject)
+        {
+            _hitObject.GetComponent<BoxPhysics>()._isPulled = false;
+            _hitObject.GetComponent<BoxPhysics>()._isPushed = false;
+        }
+
+        _pushParticleSystemLeft.Stop();
+        _pushParticleSystemRight.Stop();
+        _pullParticleSystemLeft.Stop();
+        _pullParticleSystemRight.Stop();
+
+        _hitObject = null;
+        _hitRigidbody = null;
         _state = States.None;
+    }
+
+    public void UpdateInput(Vector3 input)
+    {
+        _input = input;
     }
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    private void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            Push();
-        }
-        else if (Input.GetMouseButton(1))
-        {
-            Pull();
-        }
-        else
-        {
-            if (_hitObject)
-            {
-                _hitObject.GetComponent<BoxPhysics>()._isPulled = false;
-                _hitObject.GetComponent<BoxPhysics>()._isPushed = false;
-            }
-
-            _pushParticleSystemLeft.Stop();
-            _pushParticleSystemRight.Stop();
-            _pullParticleSystemLeft.Stop();
-            _pullParticleSystemRight.Stop();
-
-            _hitObject = null;
-            _hitRigidbody = null;
-            _state = States.None;
-        }
     }
 
     private void FixedUpdate()
@@ -161,6 +151,8 @@ public class MagnetMechanic : MonoBehaviour
 
         if (distance >= maxDistance)
         {
+            _hitObject.GetComponent<BoxPhysics>()._isPulled = false;
+            _hitObject.GetComponent<BoxPhysics>()._isPushed = false;
             _hitObject = null;
 
             return;
@@ -173,7 +165,7 @@ public class MagnetMechanic : MonoBehaviour
         if (_hitRigidbody)
         {
             _currentVectorToMagnet = -(_hitObject.transform.position - transform.position + -transform.forward * distanceFromMagnet).normalized * force;
-            _currentVectorToMouse = (Input.mousePosition - Camera.main.WorldToScreenPoint(_hitObject.transform.position)).normalized;
+            _currentVectorToMouse = (_input - Camera.main.WorldToScreenPoint(transform.position)).normalized;
 
             _currentVectorToMouse *= (_state == States.Push) ? mouseForcePush : mouseForcePull;
 
@@ -201,5 +193,11 @@ public class MagnetMechanic : MonoBehaviour
 
         Gizmos.color = Color.green;
         Gizmos.DrawRay(_hitObject.transform.position, _currentVectorToMouse);
+
+        if (_input != Vector3.zero)
+        {
+            Gizmos.color = Color.white;
+            Gizmos.DrawSphere(Camera.main.ScreenToWorldPoint(_input), 2f);
+        }
     }
 }

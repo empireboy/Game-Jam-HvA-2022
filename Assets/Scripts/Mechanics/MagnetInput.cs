@@ -34,7 +34,7 @@ public class MagnetInput : MonoBehaviour
                         {
                             angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Vertical_Right_Playstation"), Input.GetAxis("ControllerOne_Horizontal_Right_Playstation")) * Mathf.Rad2Deg;
 
-                            if (Input.GetKey(KeyCode.Joystick1Button3))
+                            if (Input.GetKey(KeyCode.Joystick1Button5))
                             {
                                 _magnetMechanic.Push();
                             }
@@ -53,11 +53,11 @@ public class MagnetInput : MonoBehaviour
                         {
                             angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Vertical_Right"), Input.GetAxis("ControllerOne_Horizontal_Right")) * Mathf.Rad2Deg;
 
-                            if (Input.GetKey(KeyCode.Joystick1Button4))
+                            if (Input.GetKey(KeyCode.Joystick1Button5))
                             {
                                 _magnetMechanic.Push();
                             }
-                            else if (Input.GetKey(KeyCode.Joystick1Button5))
+                            else if (Input.GetKey(KeyCode.Joystick1Button4))
                             {
                                 _magnetMechanic.Pull();
                             }
@@ -77,7 +77,7 @@ public class MagnetInput : MonoBehaviour
                         {
                             angle = Mathf.Atan2(Input.GetAxis("ControllerTwo_Vertical_Right_Playstation"), Input.GetAxis("ControllerTwo_Horizontal_Right_Playstation")) * Mathf.Rad2Deg;
 
-                            if (Input.GetKey(KeyCode.Joystick2Button3))
+                            if (Input.GetKey(KeyCode.Joystick2Button5))
                             {
                                 _magnetMechanic.Push();
                             }
@@ -96,11 +96,11 @@ public class MagnetInput : MonoBehaviour
                         {
                             angle = Mathf.Atan2(Input.GetAxis("ControllerTwo_Vertical_Right"), Input.GetAxis("ControllerTwo_Horizontal_Right")) * Mathf.Rad2Deg;
 
-                            if (Input.GetKey(KeyCode.Joystick2Button4))
+                            if (Input.GetKey(KeyCode.Joystick2Button5))
                             {
                                 _magnetMechanic.Push();
                             }
-                            else if (Input.GetKey(KeyCode.Joystick2Button5))
+                            else if (Input.GetKey(KeyCode.Joystick2Button4))
                             {
                                 _magnetMechanic.Pull();
                             }

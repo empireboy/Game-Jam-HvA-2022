@@ -93,7 +93,7 @@ public class PlayerScore : MonoBehaviour
                 break;
         }
 
-        if (PlayerPrefs.GetInt("LastCompletedLevel") != PlayerPrefs.GetInt("AmountOfLevels")) 
+        if (PlayerPrefs.GetInt("LastCompletedLevel") == PlayerPrefs.GetInt("AmountOfLevels")) 
         { 
             mainMenuButton.SetActive(false);
             nextLevelButton.SetActive(false);

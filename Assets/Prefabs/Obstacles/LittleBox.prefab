@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5810906029040371100}
   m_Layer: 3
   m_Name: LittleBox
-  m_TagString: Box
+  m_TagString: LittleBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 1046288453, guid: c0e7e3ae930479b4589f2ac8ef3da99a, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 843212651, guid: c0e7e3ae930479b4589f2ac8ef3da99a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9714286, y: 0.9714286}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -150,7 +150,6 @@ MonoBehaviour:
   _isBig: 0
   _isPushed: 0
   _isPulled: 0
-  _onRails: 0
   boxHit: {fileID: 5810906029040371100}
 --- !u!82 &5810906029040371100
 AudioSource:

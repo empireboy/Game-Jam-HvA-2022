@@ -17,7 +17,7 @@ public class Transport : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Box"))
+        if (collision.CompareTag("Box") || collision.CompareTag("LittleBox") || collision.CompareTag("BigBox"))
         {
             boxPhysics = collision.GetComponent<BoxPhysics>();
             box = collision.gameObject;
@@ -29,7 +29,7 @@ public class Transport : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Box"))
+        if (collision.CompareTag("Box") || collision.CompareTag("LittleBox") || collision.CompareTag("BigBox"))
         {
             boxPhysics = collision.GetComponent<BoxPhysics>();
             boxPhysics._onRails = false;

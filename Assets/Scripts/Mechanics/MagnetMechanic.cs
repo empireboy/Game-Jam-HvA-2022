@@ -59,7 +59,15 @@ public class MagnetMechanic : MonoBehaviour
         _spriteRenderer.sprite = magnetPushSprite;
 
         if (_hitObject)
+        {
+            _hitObject.GetComponent<BoxPhysics>()._isPushed = true;
+            _hitObject.GetComponent<BoxPhysics>()._isPulled = false;
+
+            if (_hitObject.GetComponent<BoxPhysics>()._isPulled)
+                _hitObject.GetComponent<BoxPhysics>()._canGoThroughOrbit = true;
+
             return;
+        }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
 
@@ -68,7 +76,7 @@ public class MagnetMechanic : MonoBehaviour
 
         _hitObject = hit.transform.gameObject;
 
-        if (!_hitObject.CompareTag("BigBox"))
+        if (!_hitObject.CompareTag("BigBox") && !_hitObject.CompareTag("LittleBox"))
         {
             _hitObject = null;
             return;
@@ -77,6 +85,9 @@ public class MagnetMechanic : MonoBehaviour
         _hitRigidbody = _hitObject.GetComponent<Rigidbody2D>();
 
         _hitObject.GetComponent<BoxPhysics>()._isPushed = true;
+
+        if (_hitObject.GetComponent<BoxPhysics>()._isPulled)
+            _hitObject.GetComponent<BoxPhysics>()._canGoThroughOrbit = true;
     }
 
     public void Pull()
@@ -94,7 +105,15 @@ public class MagnetMechanic : MonoBehaviour
         }
 
         if (_hitObject)
+        {
+            _hitObject.GetComponent<BoxPhysics>()._isPulled = true;
+            _hitObject.GetComponent<BoxPhysics>()._isPushed = false;
+
+            if (_hitObject.GetComponent<BoxPhysics>()._isPushed)
+                _hitObject.GetComponent<BoxPhysics>()._canGoThroughOrbit = true;
+
             return;
+        }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
 
@@ -103,7 +122,7 @@ public class MagnetMechanic : MonoBehaviour
 
         _hitObject = hit.transform.gameObject;
 
-        if (!_hitObject.CompareTag("BigBox"))
+        if (!_hitObject.CompareTag("BigBox") && !_hitObject.CompareTag("LittleBox"))
         {
             _hitObject = null;
             return;
@@ -112,6 +131,9 @@ public class MagnetMechanic : MonoBehaviour
         _hitRigidbody = _hitObject.GetComponent<Rigidbody2D>();
 
         _hitObject.GetComponent<BoxPhysics>()._isPulled = true;
+
+        if (_hitObject.GetComponent<BoxPhysics>()._isPushed)
+            _hitObject.GetComponent<BoxPhysics>()._canGoThroughOrbit = true;
     }
 
     public void ReleaseMagnetism()
@@ -120,6 +142,7 @@ public class MagnetMechanic : MonoBehaviour
         {
             _hitObject.GetComponent<BoxPhysics>()._isPulled = false;
             _hitObject.GetComponent<BoxPhysics>()._isPushed = false;
+            _hitObject.GetComponent<BoxPhysics>()._canGoThroughOrbit = false;
         }
 
         _pushParticleSystemLeft.Stop();

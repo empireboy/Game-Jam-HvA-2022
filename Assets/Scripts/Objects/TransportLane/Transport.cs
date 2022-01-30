@@ -53,7 +53,6 @@ public class Transport : MonoBehaviour
 
         if(box.transform.position.x > transform.position.x + (GetComponent<Collider2D>().bounds.size.x / 2) || box.transform.position.x < transform.position.x - (GetComponent<Collider2D>().bounds.size.x / 2))
         {
-            Debug.Log("daiugwdia");
             movementSpeed *= -1;
         }
     }

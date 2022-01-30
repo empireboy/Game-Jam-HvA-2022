@@ -27,7 +27,7 @@ public class MagnetMechanic : MonoBehaviour
     [SerializeField]
     private ParticleSystem _pullParticleSystemRight;
 
-    private States _state;
+    [HideInInspector] public  States _state;
     private GameObject _hitObject;
     private Rigidbody2D _hitRigidbody;
     private SpriteRenderer _spriteRenderer;
@@ -69,7 +69,7 @@ public class MagnetMechanic : MonoBehaviour
             return;
         }
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, maxDistance, ~LayerMask.GetMask("Ground"));
 
         if (!hit)
             return;
@@ -115,7 +115,7 @@ public class MagnetMechanic : MonoBehaviour
             return;
         }
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, maxDistance, ~LayerMask.GetMask("Ground"));
 
         if (!hit)
             return;

@@ -5,6 +5,7 @@ public class InputController : MonoBehaviour
 {
     public ControllerType _currentCType = ControllerType.none;
     public PlayerSlot _currentPlayer = PlayerSlot.none;
+    public Controller _controller = Controller.xbox;
 
     private CharacterController2D cc;
 
@@ -39,11 +40,17 @@ public class InputController : MonoBehaviour
                 switch (_currentPlayer)
                 {
                     case PlayerSlot.PlayerOne:
-                        cc.SetAxis(Input.GetAxis("ControllerOne_Horizontal"), Input.GetAxisRaw("ControllerOne_Jump"));
+                        if (_controller == Controller.xbox)
+                            cc.SetAxis(Input.GetAxis("ControllerOne_Horizontal"), Input.GetAxisRaw("ControllerOne_Jump"));
+                        else
+                            cc.SetAxis(Input.GetAxis("ControllerOne_Horizontal"), Input.GetAxisRaw("ControllerOne_Jump_Playstation"));
                         break;
 
                     case PlayerSlot.PlayerTwo:
-                        cc.SetAxis(Input.GetAxis("ControllerTwo_Horizontal"), Input.GetAxisRaw("ControllerTwo_Jump"));
+                        if (_controller == Controller.xbox)
+                            cc.SetAxis(Input.GetAxis("ControllerTwo_Horizontal"), Input.GetAxisRaw("ControllerTwo_Jump"));
+                        else
+                            cc.SetAxis(Input.GetAxis("ControllerTwo_Horizontal"), Input.GetAxisRaw("ControllerTwo_Jump_Playstation"));
                         break;
                 }
 

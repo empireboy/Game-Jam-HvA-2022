@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8551453554257207664}
   - component: {fileID: 2051258733453550367}
   m_Layer: 0
-  m_Name: ParticleSystem
+  m_Name: Landing Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ ParticleSystem:
   m_GameObject: {fileID: 624724541802098188}
   serializedVersion: 8
   lengthInSec: 0.5
-  simulationSpeed: 1
+  simulationSpeed: 1.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0

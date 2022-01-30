@@ -20,6 +20,7 @@ public class CharacterController2D : MonoBehaviour
     const float _groundedRadius = .1f;
 
     private Rigidbody2D _rb;
+    private ParticleSystem landingParticles;
 
     private Vector3 _velocity = Vector3.zero;
 
@@ -36,6 +37,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Awake()
     {
+        landingParticles = GetComponentInChildren<ParticleSystem>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -83,6 +85,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void GroundCheck()
     {
+        bool wasGrounded = grounded;
         grounded = false;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(_groundCheck.position, _groundedRadius, _whatIsGround);
@@ -91,6 +94,7 @@ public class CharacterController2D : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 grounded = true;
+                if (!wasGrounded) LandingParticles();
             }
         }
     }
@@ -127,5 +131,10 @@ public class CharacterController2D : MonoBehaviour
     {
         horizontal = h;
         vertical = v;
+    }
+
+    private void LandingParticles()
+    {
+        landingParticles.Play();
     }
 }

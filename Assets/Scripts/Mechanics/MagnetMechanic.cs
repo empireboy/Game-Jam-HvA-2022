@@ -69,7 +69,7 @@ public class MagnetMechanic : MonoBehaviour
             return;
         }
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, maxDistance, ~LayerMask.GetMask("Ground"));
 
         if (!hit)
             return;
@@ -115,7 +115,7 @@ public class MagnetMechanic : MonoBehaviour
             return;
         }
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, maxDistance, ~LayerMask.GetMask("Ground"));
 
         if (!hit)
             return;

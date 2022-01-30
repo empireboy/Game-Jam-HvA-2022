@@ -17,7 +17,7 @@ public class CharacterController2D : MonoBehaviour
 
     [SerializeField] private Transform _groundCheck;
 
-    const float _groundedRadius = .1f;
+    const float _groundedRadius = .12f;
 
     private Rigidbody2D _rb;
 

@@ -11,20 +11,7 @@ public class CameraFollow : MonoBehaviour
 
     [SerializeField] private Vector3 _offset = Vector3.zero;
 
-    [SerializeField] private bool _screenshakeOnAwake = false;
-
-    [SerializeField] private AudioClip _explosion;
-
     private Vector3 _targetPosition = Vector3.zero;
-
-    private void Start()
-    {
-        if (_screenshakeOnAwake)
-        {
-            ScreenShake();
-            GetComponent<AudioSource>().PlayOneShot(_explosion);
-        }
-    }
 
     private void FixedUpdate()
     {
@@ -55,7 +42,7 @@ public class CameraFollow : MonoBehaviour
 
     private IEnumerator Shake()
     {
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 4; i++)
         {
             transform.position += new Vector3(
                 (float)Random.Range(-_screenshakeDistance, _screenshakeDistance),

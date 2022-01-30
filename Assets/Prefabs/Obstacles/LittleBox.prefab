@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6871200080321696453}
   - component: {fileID: 7554320187068812846}
   - component: {fileID: 5810906029040371100}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: LittleBox
   m_TagString: LittleBox
   m_Icon: {fileID: 0}

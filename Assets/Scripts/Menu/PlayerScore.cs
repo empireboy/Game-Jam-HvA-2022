@@ -19,28 +19,52 @@ public class PlayerScore : MonoBehaviour
         {
             int hours = TimeSpan.FromSeconds(time).Hours;
             int minutes = TimeSpan.FromSeconds(time).Minutes;
-            int seconds = TimeSpan.FromSeconds(time).Seconds;
-            timeText.text = "Your time: " + hours + ":" + minutes+ ":" + seconds;
+            string seconds = TimeSpan.FromSeconds(time).Seconds.ToString();
+
+            if (int.Parse(seconds) < 10)
+            {
+                seconds = "0" + seconds;
+            }
+
+            timeText.text = "CURRENT TIME " + hours + ":" + minutes + ":" + seconds;
         }
         else
         {
             int minutes = TimeSpan.FromSeconds(time).Minutes;
-            int seconds = TimeSpan.FromSeconds(time).Seconds;
-            timeText.text = "Your time: " + minutes + ":" + seconds;
+            string seconds = TimeSpan.FromSeconds(time).Seconds.ToString();
+
+            if (int.Parse(seconds) < 10)
+            {
+                seconds = "0" + seconds;
+            }
+
+            timeText.text = "CURRENT TIME " + minutes + ":" + seconds;
         }
 
         if (PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel")) > 3600)
         {
             int hours = TimeSpan.FromSeconds(PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))).Hours;
             int minutes = TimeSpan.FromSeconds(PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))).Minutes;
-            int seconds = TimeSpan.FromSeconds(PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))).Seconds;
-            fastestTimeText.text = "Your time: " + hours + ":" + minutes + ":" + seconds;
+            string seconds = TimeSpan.FromSeconds(PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))).Seconds.ToString();
+
+            if (int.Parse(seconds) < 10)
+            {
+                seconds = "0" + seconds;
+            }
+
+            fastestTimeText.text = hours + ":" + minutes + ":" + seconds;
         }
         else
         {
             int minutes = TimeSpan.FromSeconds(PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))).Minutes;
-            int seconds = TimeSpan.FromSeconds(PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))).Seconds;
-            fastestTimeText.text = "Your fastest time: " + minutes + ":" + seconds;
+            string seconds = TimeSpan.FromSeconds(PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel"))).Seconds.ToString();
+
+            if (int.Parse(seconds) < 10)
+            {
+                seconds = "0" + seconds;
+            }
+
+            fastestTimeText.text = minutes + ":" + seconds;
         }
         //timeText.text = "Your time: " + ((int)PlayerTimer._timeSpentInLevel).ToString() + " seconds";
         //fastestTimeText.text = "Your fastest time: " + PlayerPrefs.GetInt("FastestTimeLevel" + PlayerPrefs.GetInt("LastCompletedLevel")).ToString() + " seconds";

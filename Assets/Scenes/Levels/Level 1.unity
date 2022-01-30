@@ -228,6 +228,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &60546938
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4068190854438876816, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_Name
+      value: Magnet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: maxDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: mouseForcePull
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: mouseForcePush
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: magneticForcePull
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: magneticForcePush
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876829, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 909698013}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
 --- !u!1001 &198909259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4853634265138141528, guid: 260315a42f6d8bc40ac6095aabb23940, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4853634265138141528, guid: 260315a42f6d8bc40ac6095aabb23940, type: 3}
       propertyPath: m_LocalPosition.x
@@ -285,6 +366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260315a42f6d8bc40ac6095aabb23940, type: 3}
+--- !u!1 &198909260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853634265138141527, guid: 260315a42f6d8bc40ac6095aabb23940, type: 3}
+  m_PrefabInstance: {fileID: 198909259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &263335539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -374,7 +460,7 @@ Transform:
   - {fileID: 923383756}
   - {fileID: 1767831591}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &426054985 stripped
 Transform:
@@ -446,7 +532,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588592574
 GameObject:
@@ -541,7 +627,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -623,7 +709,7 @@ TilemapRenderer:
   m_SortingLayer: -3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.0074626803, y: 0.0074626803, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -9633,7 +9719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1913043559760199099, guid: cfe362b85e68c7942b162eb81c5b3305, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1913043559760199099, guid: cfe362b85e68c7942b162eb81c5b3305, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9694,7 +9780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544191003091278709, guid: 0c8706eb964df744489fd23652a761ba, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4544191003091278709, guid: 0c8706eb964df744489fd23652a761ba, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9931,7 +10017,7 @@ Transform:
   - {fileID: 1909930536}
   - {fileID: 1166653794}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &834163493
 GameObject:
@@ -10008,7 +10094,7 @@ TilemapRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.0074626803, y: 0.0074626803, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -10325,7 +10411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1106172381070815432, guid: e32e8dddb2714274683bc429c1462b12, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1106172381070815432, guid: e32e8dddb2714274683bc429c1462b12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10369,6 +10455,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e32e8dddb2714274683bc429c1462b12, type: 3}
+--- !u!1 &909698013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1106172381070815431, guid: e32e8dddb2714274683bc429c1462b12, type: 3}
+  m_PrefabInstance: {fileID: 909698012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &923383756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5206493816909783632, guid: bf0504277a348a8468f7325f7c6d68a1, type: 3}
@@ -10554,7 +10645,7 @@ TilemapRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.0074626803, y: 0.0074626803, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -10921,7 +11012,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.014705896, y: 0.014705896, z: 0}
+  m_ChunkCullingBounds: {x: 0.022388041, y: 0.022388041, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -13519,7 +13610,7 @@ Transform:
   - {fileID: 678005972}
   - {fileID: 1520704601}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415188376
 GameObject:
@@ -13731,6 +13822,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1433797215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4068190854438876816, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_Name
+      value: Magnet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876818, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: maxDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: mouseForcePull
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: mouseForcePush
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: magneticForcePull
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876828, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: magneticForcePush
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068190854438876829, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 198909260}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d9731fbb9d375b47ae5d126a7cd2437, type: 3}
 --- !u!1 &1459973848
 GameObject:
   m_ObjectHideFlags: 0
@@ -13950,7 +14122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6993471669012214309, guid: 4d8621736c209d348ac45b956783041a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6993471669012214309, guid: 4d8621736c209d348ac45b956783041a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14468,7 +14640,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.014705896, y: 0.014705896, z: 0}
+  m_ChunkCullingBounds: {x: 0.022388041, y: 0.022388041, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -18291,7 +18463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983700599947643963, guid: 0d8a89e1eae0c434f9fe88e9077e07ae, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2983700599947643963, guid: 0d8a89e1eae0c434f9fe88e9077e07ae, type: 3}
       propertyPath: m_LocalPosition.x

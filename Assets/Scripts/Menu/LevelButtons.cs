@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class LevelButtons : MonoBehaviour
 {
     [SerializeField] private int level;
+    [SerializeField] private GameObject star1, star2, star3;
     private Image buttonImage;
     private UnityEngine.UI.Button button;
     private Color color;
@@ -17,6 +18,27 @@ public class LevelButtons : MonoBehaviour
         buttonImage = GetComponent<Image>();
         color = buttonImage.color;
         button = GetComponent<UnityEngine.UI.Button>();
+    }
+
+    private void Start()
+    {
+        switch (PlayerPrefs.GetInt("HighestStarsLevel" + level))
+        {
+            case 1:
+                star1.GetComponent<LevelEndStars>().Activate();
+                break;
+
+            case 2:
+                star1.GetComponent<LevelEndStars>().Activate();
+                star2.GetComponent<LevelEndStars>().Activate();
+                break;
+
+            case 3:
+                star1.GetComponent<LevelEndStars>().Activate();
+                star2.GetComponent<LevelEndStars>().Activate();
+                star3.GetComponent<LevelEndStars>().Activate();
+                break;
+        }
     }
 
     public void Update()

@@ -66,6 +66,7 @@ public class Buttons : MonoBehaviour
         for (int i = 1; i <= PlayerPrefs.GetInt("AmountOfLevels"); i++)
         {
             PlayerPrefs.SetInt("FastestTimeLevel" + i, 0);
+            PlayerPrefs.SetInt("HighestStarsLevel" + i, 0);
         }
     }
 }

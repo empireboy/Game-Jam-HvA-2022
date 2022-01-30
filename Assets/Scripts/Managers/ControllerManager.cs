@@ -23,8 +23,6 @@ public class ControllerManager : MonoBehaviour
 
         _amountConnectedControllers = 0;
 
-        Debug.Log(_controllers[0]);
-
         for (int i = 0; i < _controllers.Length; i++)
         {
             if (_controllers[i] != "")

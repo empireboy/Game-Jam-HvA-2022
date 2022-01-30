@@ -8,6 +8,8 @@ TagManager:
   - Player2
   - Box
   - BigBox
+  - LittleBox
+  - Button
   layers:
   - Default
   - TransparentFX

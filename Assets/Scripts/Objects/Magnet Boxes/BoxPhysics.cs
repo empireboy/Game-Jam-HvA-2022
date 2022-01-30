@@ -24,7 +24,8 @@ public class BoxPhysics : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        boxHit.Play();
+        if(collision.gameObject.tag != "Button")
+            boxHit.Play();
     }
 
     // Update is called once per frame

@@ -481,6 +481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7976045097765376266, guid: 2afc13d23650b8d478991b737e445d8f, type: 3}
+      propertyPath: m_TagString
+      value: BigBox
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2afc13d23650b8d478991b737e445d8f, type: 3}
 --- !u!1001 &1444408837
@@ -947,7 +951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5424368524061932219, guid: 1a2db7160ee38b443b0ff8f58bba611a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.6299295
+      value: 3.68
       objectReference: {fileID: 0}
     - target: {fileID: 5424368524061932219, guid: 1a2db7160ee38b443b0ff8f58bba611a, type: 3}
       propertyPath: m_LocalPosition.y

@@ -646,7 +646,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: ControllerOne_Jump_Playerstation
+    m_Name: ControllerOne_Jump_Playstation
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -662,7 +662,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: ControllerTwo_Jump_Playerstation
+    m_Name: ControllerTwo_Jump_Playstation
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -726,7 +726,7 @@ InputManager:
     axis: 5
     joyNum: 1
   - serializedVersion: 3
-    m_Name: ControllerOne_Vertical_Right_Playstation
+    m_Name: ControllerOne_Horizontal_Right_Playstation
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 

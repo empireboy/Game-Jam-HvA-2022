@@ -31,9 +31,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 282261575105355017}
   - {fileID: 6850136517243748220}
   - {fileID: 6855918838782039893}
+  - {fileID: 282261575105355017}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4707236065963714278, guid: f41bb965269e4a042be286957516ec57, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6832307017467169320, guid: f41bb965269e4a042be286957516ec57, type: 3}
       propertyPath: m_Name
       value: Controller Warning Menu
@@ -194,7 +198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2459953684759280219, guid: 94a2ae0189da1b0458e07f457d641ec2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2459953684759280219, guid: 94a2ae0189da1b0458e07f457d641ec2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -388,7 +392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2459953684759280219, guid: a164d743808aedd42980089f946a6ca7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2459953684759280219, guid: a164d743808aedd42980089f946a6ca7, type: 3}
       propertyPath: m_AnchorMax.x

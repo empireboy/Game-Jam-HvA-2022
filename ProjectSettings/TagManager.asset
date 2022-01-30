@@ -4,10 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LittleBox
   - Door
-  - BigBox
   - Player2
+  - Box
+  - BigBox
+  - LittleBox
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -42,6 +44,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1709934225
+    locked: 0
+  - name: Background Props
+    uniqueID: 2718228139
+    locked: 0
+  - name: Background No Shadow
+    uniqueID: 2836706361
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 389617387
     locked: 0

@@ -691,7 +691,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 5
+    axis: 2
     joyNum: 2
   - serializedVersion: 3
     m_Name: ControllerTwo_Horizontal_Right_Playstation
@@ -707,7 +707,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 2
+    axis: 5
     joyNum: 2
   - serializedVersion: 3
     m_Name: ControllerOne_Vertical_Right_Playstation
@@ -723,7 +723,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 0
-    axis: 5
+    axis: 2
     joyNum: 1
   - serializedVersion: 3
     m_Name: ControllerOne_Horizontal_Right_Playstation
@@ -739,6 +739,6 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 2
+    axis: 5
     joyNum: 1
   m_UsePhysicalKeys: 0

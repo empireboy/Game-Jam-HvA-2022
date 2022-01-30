@@ -9767,7 +9767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6993471669012214310, guid: 4d8621736c209d348ac45b956783041a, type: 3}
       propertyPath: _giveWarning
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6993471669012214311, guid: 4d8621736c209d348ac45b956783041a, type: 3}
       propertyPath: m_Name

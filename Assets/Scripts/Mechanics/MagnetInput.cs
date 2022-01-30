@@ -29,22 +29,45 @@ public class MagnetInput : MonoBehaviour
                 {
                     case PlayerSlot.PlayerOne:
 
-                        angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Vertical_Right"), Input.GetAxis("ControllerOne_Horizontal_Right")) * Mathf.Rad2Deg;
 
-                        if (Input.GetKey(KeyCode.JoystickButton3))
+                        if (_inputController._controller == Controller.playstation)
                         {
-                            _magnetMechanic.Push();
-                        }
-                        else if (Input.GetKey(KeyCode.JoystickButton4))
-                        {
-                            _magnetMechanic.Pull();
+                            angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Vertical_Right_Playstation"), Input.GetAxis("ControllerOne_Horizontal_Right_Playstation")) * Mathf.Rad2Deg;
+
+                            if (Input.GetKey(KeyCode.JoystickButton3))
+                            {
+                                _magnetMechanic.Push();
+                            }
+                            else if (Input.GetKey(KeyCode.JoystickButton4))
+                            {
+                                _magnetMechanic.Pull();
+                            }
+                            else
+                            {
+                                _magnetMechanic.ReleaseMagnetism();
+                            }
+
+                            _magnetMechanic.UpdateInput(Camera.main.WorldToScreenPoint(transform.position + new Vector3(Input.GetAxis("ControllerOne_Horizontal_Right_Playstation"), Input.GetAxis("ControllerOne_Vertical_Right_Playstation"), 0) * 10));
                         }
                         else
                         {
-                            _magnetMechanic.ReleaseMagnetism();
-                        }
+                            angle = Mathf.Atan2(Input.GetAxis("ControllerOne_Vertical_Right"), Input.GetAxis("ControllerOne_Horizontal_Right")) * Mathf.Rad2Deg;
 
-                        _magnetMechanic.UpdateInput(Camera.main.WorldToScreenPoint(transform.position + new Vector3(Input.GetAxis("ControllerOne_Horizontal_Right"), 0, Input.GetAxis("ControllerOne_Vertical_Right")) * 10));
+                            if (Input.GetKey(KeyCode.JoystickButton4))
+                            {
+                                _magnetMechanic.Push();
+                            }
+                            else if (Input.GetKey(KeyCode.JoystickButton5))
+                            {
+                                _magnetMechanic.Pull();
+                            }
+                            else
+                            {
+                                _magnetMechanic.ReleaseMagnetism();
+                            }
+
+                            _magnetMechanic.UpdateInput(Camera.main.WorldToScreenPoint(transform.position + new Vector3(Input.GetAxis("ControllerOne_Horizontal_Right"), Input.GetAxis("ControllerOne_Vertical_Right"), 0) * 10));
+                        }
 
                         break;
 

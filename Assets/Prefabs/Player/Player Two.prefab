@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentCType: 2
   _currentPlayer: 2
+  _controller: 0
   _icon: {fileID: 3438402532668760630, guid: fa9153b210f185543abb4b5f4f573094, type: 3}
 --- !u!95 &5477075667732219709
 Animator:

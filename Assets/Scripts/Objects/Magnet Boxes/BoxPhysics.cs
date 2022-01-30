@@ -8,6 +8,7 @@ public class BoxPhysics : MonoBehaviour
     public bool _isPushed;
     public bool _isPulled;
     public bool _onRails;
+    public bool _canGoThroughOrbit;
     [SerializeField] AudioSource boxHit;
 
     private Rigidbody2D rb;
@@ -47,19 +48,22 @@ public class BoxPhysics : MonoBehaviour
         }
         else rb.gravityScale = normalGravity;
 
-        if (normalGravity == 1)
+        if (!_canGoThroughOrbit)
         {
-            transform.position = new Vector3(transform.position.x, Mathf.Min(transform.position.y, 0), transform.position.z);
+            if (normalGravity == 1)
+            {
+                transform.position = new Vector3(transform.position.x, Mathf.Min(transform.position.y, 0), transform.position.z);
 
-            if (transform.position.y >= 0)
-                rb.velocity *= new Vector3(1, 0, 1);
-        }
-        else if (normalGravity == -1)
-        {
-            transform.position = new Vector3(transform.position.x, Mathf.Max(transform.position.y, 0), transform.position.z);
+                if (transform.position.y >= 0)
+                    rb.velocity *= new Vector3(1, 0, 1);
+            }
+            else if (normalGravity == -1)
+            {
+                transform.position = new Vector3(transform.position.x, Mathf.Max(transform.position.y, 0), transform.position.z);
 
-            if (transform.position.y <= 0)
-                rb.velocity *= new Vector3(1, 0, 1);
+                if (transform.position.y <= 0)
+                    rb.velocity *= new Vector3(1, 0, 1);
+            }
         }
     }
 }
